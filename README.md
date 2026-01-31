@@ -1,20 +1,61 @@
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+  <img src="/logo.jpg" alt="Herdentity Logo" width="120" style="border-radius: 50%" />
+  <h1>Herdentity</h1>
+  <p><strong>Beyond the Surface. Rooted in Identity.</strong></p>
+  
+  <p>
+    <a href="https://www.instagram.com/herdentity" target="_blank">
+      <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" />
+    </a>
+    <a href="https://www.facebook.com/profile.php?id=61585987056794" target="_blank">
+      <img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" alt="Facebook" />
+    </a>
+  </p>
 </div>
 
-# Run and deploy your AI Studio app
+---
 
-This contains everything you need to run your app locally.
+## ✨ The Movement
+**Herdentity** is a leadership movement dedicated to equipping women with **identity-rooted confidence** and real-life tactical skills. We believe that true impact doesn't start with a title, but with the divine assurance of who you are.
 
-View your app in AI Studio: https://ai.studio/apps/drive/14vWdD2xMAAI7cNWllq3QqMfc6hws5Xd3
+We bridge the gap between current reality and highest potential through focused mentorship, global community, and professional excellence.
 
-## Run Locally
+## 🌟 Key Pillars
+- **Resilient Identity**: Building unshakeable self-worth and the mental resilience to lead through challenges.
+- **Financial Mastery**: Practical empowerment through financial literacy and wealth creation skills.
+- **Purpose & Leadership**: Uncovering divine purpose and leading with authority in careers and communities.
 
-**Prerequisites:**  Node.js
+## 🎨 Design Philosophy
+The platform embodies a **"Godly Boutique"** aesthetic, featuring:
+- **Ethereal Visuals**: Soft light rays, divine mesh gradients, and shimmering animations.
+- **Premium Palette**: A sophisticated blend of **Royal Purple** and **Satin Gold**.
+- **Modern Typography**: Elegant serif italics paired with sleek, professional sans-serif.
 
+## 🚀 Tech Stack
+- **Framework**: React + Vite
+- **Styling**: Tailwind CSS (Custom Design System)
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 🛠️ Local Development
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/Adeolu05/herdentity.git
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Start the divine engine**:
+   ```bash
+   npm run dev
+   ```
+
+---
+
+<div align="center">
+  <p>© 2026 Herdentity. All rights reserved.</p>
+</div>
