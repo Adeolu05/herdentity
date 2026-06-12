@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Space+Grotesk:wght@400;500;600&display=swap');
+
+:root {
+  --color-bg-deep: #0A0614;
+  --color-bg-dark: #130825;
+  --color-bg-feature: #1C0840;
+  --color-bg-light: #F4EEFF;
+  --color-bg-white: #FFFFFF;
+  --color-purple-shadow: #3D006B;
+  --color-purple-core: #6200A0;
+  --color-purple-vivid: #9B00D4;
+  --color-gold: #D4AF37;
+  --color-gold-light: #E8CE70;
+  --color-lavender: #C4A0FF;
+  --color-lavender-whisper: #D4C8F0;
+}
+
+/* Duotone brand treatment for CEO portrait */
+.ceo-dark-filter {
+  filter: brightness(0.95) contrast(1.05) saturate(1.1);
+  mix-blend-mode: luminosity;
+  transition: all 0.5s ease-in-out;
+}
+
+.ceo-container-dark {
+  position: relative;
+}
+
+.ceo-container-dark::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(98, 0, 160, 0.08);
+  mix-blend-mode: color;
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+.ceo-container-dark:hover .ceo-dark-filter {
+  filter: brightness(1) contrast(1) saturate(1);
+  mix-blend-mode: normal;
+}
+
+/* Skew layout helpers */
+.clip-skew-bottom {
+  clip-path: polygon(0 0, 100% 0, 100% 98%, 0 100%);
+}
+
+.clip-skew-top {
+  clip-path: polygon(0 2%, 100% 0, 100% 100%, 0 100%);
+}
+
+/* Subtle grain texture overlay */
+.grain-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 1;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Gold glow hover effect */
+.gold-glow-hover:hover {
+  box-shadow: 0 10px 30px -10px rgba(212, 175, 55, 0.15);
+  border-color: rgba(212, 175, 55, 0.4);
+}
+
+/* Smooth transitions */
+.transition-brand {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}

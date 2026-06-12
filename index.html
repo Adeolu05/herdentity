@@ -16,18 +16,30 @@
       theme: {
         extend: {
           colors: {
-            royal: '#a80dc2',
-            'royal-hover': '#8a0a9f',
-            lavender: '#f5e1ff',
-            gold: '#C5A059',
-            'gold-light': '#E5C48B',
-            zinc: {
-              950: '#09090b',
-            }
+            'brand-deep': '#0A0614',
+            'brand-dark': '#130825',
+            'brand-plum': '#1C0840',
+            'brand-light': '#F4EEFF',
+            'brand-gold': '#D4AF37',
+            'brand-gold-light': '#E8CE70',
+            'brand-lavender': '#C4A0FF',
+            'brand-lavender-whisper': '#D4C8F0',
+            'brand-text-primary': '#FFFFFF',
+            'brand-text-light': '#D4C8F0',
+            'brand-text-muted': '#8B78B0',
+            'brand-text-dark': '#1A0A2E',
+            'brand-text-purple': '#6200A0',
+            'brand-border-dark': 'rgba(155,0,212,0.2)',
+            'brand-border-light': 'rgba(98,0,160,0.15)',
+            'brand-border-gold': 'rgba(212,175,55,0.3)',
+            'brand-rose': '#C4A0FF',
+            'brand-border': 'rgba(155,0,212,0.2)',
           },
           fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-            serif: ['Instrument Serif', 'serif'],
+            sans: ['"DM Sans"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+            mono: ['"Space Grotesk"', 'sans-serif'],
+            label: ['"Space Grotesk"', 'sans-serif'],
           },
           animation: {
             'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
@@ -47,15 +59,14 @@
       },
     }
   </script>
-  <!-- Google Fonts -->
+  <!-- Google Fonts via @import and link fallback -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap"
-    rel="stylesheet">
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Space+Grotesk:wght@400;500;600&display=swap');
+
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'DM Sans', sans-serif;
     }
 
     /* Custom scrollbar to match the minimal aesthetic */
@@ -68,7 +79,7 @@
     }
 
     ::-webkit-scrollbar-thumb {
-      background-color: #e4e4e7;
+      background-color: #D4AF37;
       border-radius: 20px;
     }
 
@@ -91,10 +102,11 @@
       }
     }
     </script>
+
   <link rel="stylesheet" href="/index.css">
 </head>
 
-<body class="bg-white text-zinc-600 antialiased selection:bg-royal selection:text-white">
+<body class="bg-white text-zinc-600 antialiased selection:bg-brand-plum selection:text-white">
   <div id="root"></div>
   <script type="module" src="/index.tsx"></script>
 </body>
