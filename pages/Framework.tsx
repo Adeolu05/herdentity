@@ -123,7 +123,7 @@ const Framework: React.FC = () => {
                 </div>
                 <div className="pt-6 relative z-10">
                   <a
-                    href="#programmes"
+                    href="/programmes"
                     className="inline-flex items-center gap-2 text-brand-gold hover:text-brand-gold/80 transition-colors text-sm font-label uppercase tracking-widest font-semibold"
                   >
                     Explore {s.progName} <ArrowRight className="w-4 h-4" />
@@ -172,7 +172,7 @@ const Framework: React.FC = () => {
           </div>
 
           <a
-            href="#programmes"
+            href="/programmes"
             className="inline-flex items-center gap-2 bg-brand-gold text-brand-dark hover:bg-brand-gold/90 transition-all font-label uppercase tracking-widest text-xs font-semibold px-8 py-4 rounded-md shadow-lg transform hover:-translate-y-0.5"
           >
             Find Your Path <ArrowRight className="w-4 h-4" />

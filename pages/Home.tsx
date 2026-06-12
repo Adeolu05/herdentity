@@ -133,7 +133,7 @@ const Home: React.FC = () => {
               <ArrowRight className="w-4 h-4" />
             </a>
             <a
-              href="#programmes"
+              href="/programmes"
               className="border border-brand-gold/40 text-brand-gold hover:bg-brand-gold/10 transition-all font-label uppercase tracking-widest text-xs font-semibold px-8 py-4 rounded-md flex items-center justify-center gap-2"
             >
               Explore Programmes
@@ -316,7 +316,7 @@ const Home: React.FC = () => {
           </div>
 
           <a
-            href="#framework"
+            href="/framework"
             className="inline-flex items-center gap-2 text-brand-gold hover:text-brand-gold/90 transition-colors text-sm font-label uppercase tracking-widest font-semibold"
           >
             Learn The Full Framework <ArrowRight className="w-4 h-4" />
@@ -397,7 +397,7 @@ const Home: React.FC = () => {
                   <span className="text-xs font-semibold text-brand-text-muted font-label uppercase tracking-widest">
                     {h.duration}
                   </span>
-                  <a href="#programmes" className="text-xs font-bold text-brand-gold hover:underline font-label uppercase tracking-wider flex items-center gap-1">
+                  <a href="/programmes" className="text-xs font-bold text-brand-gold hover:underline font-label uppercase tracking-wider flex items-center gap-1">
                     Learn More <ArrowRight className="w-3.5 h-3.5" />
                   </a>
                 </div>

@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="space-y-6">
-            <a href="#home" className="text-brand-text-primary font-bold tracking-tight text-xl uppercase flex items-center gap-3 font-label">
+            <a href="/" className="text-brand-text-primary font-bold tracking-tight text-xl uppercase flex items-center gap-3 font-label">
               <img src="/logo.jpg" alt="Herdentity" className="w-8 h-8 rounded-full border border-brand-gold/30" />
               <span>Herdentity</span>
             </a>
@@ -48,14 +48,14 @@ const Footer: React.FC = () => {
               Quick Links
             </h4>
             <ul className="space-y-3 font-label text-xs uppercase tracking-wider">
-              <li><a href="#home" className="hover:text-brand-gold transition-colors">Home</a></li>
-              <li><a href="#about" className="hover:text-brand-gold transition-colors">About</a></li>
-              <li><a href="#framework" className="hover:text-brand-gold transition-colors">The Framework</a></li>
-              <li><a href="#programmes" className="hover:text-brand-gold transition-colors">Programmes</a></li>
-              <li><a href="#resources" className="hover:text-brand-gold transition-colors">Books & Resources</a></li>
-              <li><a href="#community" className="hover:text-brand-gold transition-colors">Community</a></li>
-              <li><a href="#stories" className="hover:text-brand-gold transition-colors">Stories</a></li>
-              <li><a href="#contact" className="hover:text-brand-gold transition-colors">Contact</a></li>
+              <li><a href="/" className="hover:text-brand-gold transition-colors">Home</a></li>
+              <li><a href="/about" className="hover:text-brand-gold transition-colors">About</a></li>
+              <li><a href="/framework" className="hover:text-brand-gold transition-colors">The Framework</a></li>
+              <li><a href="/programmes" className="hover:text-brand-gold transition-colors">Programmes</a></li>
+              <li><a href="/resources" className="hover:text-brand-gold transition-colors">Books & Resources</a></li>
+              <li><a href="/community" className="hover:text-brand-gold transition-colors">Community</a></li>
+              <li><a href="/stories" className="hover:text-brand-gold transition-colors">Stories</a></li>
+              <li><a href="/contact" className="hover:text-brand-gold transition-colors">Contact</a></li>
             </ul>
           </div>
 
@@ -64,11 +64,11 @@ const Footer: React.FC = () => {
               Programmes
             </h4>
             <ul className="space-y-3 text-sm">
-              <li><a href="#programmes" className="hover:text-brand-gold transition-colors">HER Identity Academy</a></li>
-              <li><a href="#programmes" className="hover:text-brand-gold transition-colors">HER Money Academy</a></li>
-              <li><a href="#programmes" className="hover:text-brand-gold transition-colors">HER Lead Academy</a></li>
-              <li><a href="#programmes" className="hover:text-brand-gold transition-colors">Mentorship Circles</a></li>
-              <li><a href="#programmes" className="hover:text-brand-gold transition-colors">Annual Retreats</a></li>
+              <li><a href="/programmes" className="hover:text-brand-gold transition-colors">HER Identity Academy</a></li>
+              <li><a href="/programmes" className="hover:text-brand-gold transition-colors">HER Money Academy</a></li>
+              <li><a href="/programmes" className="hover:text-brand-gold transition-colors">HER Lead Academy</a></li>
+              <li><a href="/programmes" className="hover:text-brand-gold transition-colors">Mentorship Circles</a></li>
+              <li><a href="/programmes" className="hover:text-brand-gold transition-colors">Annual Retreats</a></li>
             </ul>
           </div>
 
@@ -107,8 +107,8 @@ const Footer: React.FC = () => {
         <div className="border-t border-brand-gold/10 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs">
           <p>© {new Date().getFullYear()} Herdentity. All rights reserved.</p>
           <div className="flex gap-6 font-label uppercase tracking-widest">
-            <a href="#privacy" className="hover:text-brand-gold transition-colors">Privacy Policy</a>
-            <a href="#terms" className="hover:text-brand-gold transition-colors">Terms of Service</a>
+            <a href="/privacy" className="hover:text-brand-gold transition-colors">Privacy Policy</a>
+            <a href="/terms" className="hover:text-brand-gold transition-colors">Terms of Service</a>
           </div>
         </div>
       </div>

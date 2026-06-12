@@ -15,12 +15,12 @@ const WhatsAppIcon: React.FC<{ className?: string }> = ({ className = "w-4 h-4" 
 
 const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [currentHash, setCurrentHash] = useState<string>(window.location.hash || '#home');
+  const [currentPath, setCurrentPath] = useState<string>(window.location.pathname);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const handleHashChange = () => {
-      setCurrentHash(window.location.hash || '#home');
+    const handleLocationChange = () => {
+      setCurrentPath(window.location.pathname);
     };
     const handleScroll = () => {
       if (window.scrollY > 80) {
@@ -30,28 +30,30 @@ const Header: React.FC = () => {
       }
     };
 
-    window.addEventListener('hashchange', handleHashChange);
+    window.addEventListener('popstate', handleLocationChange);
+    window.addEventListener('pushstate', handleLocationChange);
     window.addEventListener('scroll', handleScroll);
 
     // Initial triggers
-    handleHashChange();
+    handleLocationChange();
     handleScroll();
 
     return () => {
-      window.removeEventListener('hashchange', handleHashChange);
+      window.removeEventListener('popstate', handleLocationChange);
+      window.removeEventListener('pushstate', handleLocationChange);
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Framework', href: '#framework' },
-    { name: 'Programmes', href: '#programmes' },
-    { name: 'Resources', href: '#resources' },
-    { name: 'Community', href: '#community' },
-    { name: 'Stories', href: '#stories' },
-    { name: 'Contact', href: '#contact' }
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Framework', href: '/framework' },
+    { name: 'Programmes', href: '/programmes' },
+    { name: 'Resources', href: '/resources' },
+    { name: 'Community', href: '/community' },
+    { name: 'Stories', href: '/stories' },
+    { name: 'Contact', href: '/contact' }
   ];
 
   return (
@@ -64,7 +66,7 @@ const Header: React.FC = () => {
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           {/* Logo */}
           <a
-            href="#home"
+            href="/"
             className="text-brand-text-primary font-bold tracking-tight text-lg uppercase flex items-center gap-2.5 font-label"
           >
             <img src="/logo.jpg" alt="Herdentity" className="w-8 h-8 rounded-full border border-brand-gold/30" />
@@ -74,7 +76,7 @@ const Header: React.FC = () => {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
             {navLinks.map((link) => {
-              const isActive = currentHash === link.href;
+              const isActive = currentPath === link.href;
               return (
                 <a
                   key={link.name}
@@ -144,7 +146,7 @@ const Header: React.FC = () => {
 
             <nav className="flex flex-col items-center justify-center px-10 py-12 gap-8 text-center flex-1 overflow-y-auto">
               {navLinks.map((link, idx) => {
-                const isActive = currentHash === link.href;
+                const isActive = currentPath === link.href;
                 return (
                   <motion.a
                     key={link.name}

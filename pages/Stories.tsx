@@ -266,7 +266,7 @@ const Stories: React.FC = () => {
           </p>
           <div className="pt-6">
             <a
-              href="#contact"
+              href="/contact"
               className="inline-flex items-center gap-2 bg-brand-deep text-brand-text-primary hover:bg-brand-plum transition-all font-label uppercase tracking-widest text-xs font-bold px-8 py-4 rounded-md shadow-lg"
             >
               Share Your Story

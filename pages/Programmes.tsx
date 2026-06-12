@@ -217,7 +217,7 @@ const Programmes: React.FC = () => {
                     Apply Now
                   </a>
                   <a
-                    href="#contact"
+                    href="/contact"
                     className="flex-1 py-3 px-6 rounded-md border border-brand-gold/30 hover:bg-brand-gold/10 text-brand-gold font-label uppercase tracking-wider text-xs font-bold text-center transition-all"
                   >
                     Learn More
@@ -240,7 +240,7 @@ const Programmes: React.FC = () => {
           </p>
           <div className="pt-4">
             <a
-              href="#contact"
+              href="/contact"
               className="inline-flex items-center gap-2 bg-brand-gold text-brand-dark hover:bg-brand-gold/90 transition-all font-label uppercase tracking-widest text-xs font-semibold px-8 py-4 rounded-md shadow-lg transform hover:-translate-y-0.5"
             >
               Talk to us <ArrowRight className="w-4 h-4" />

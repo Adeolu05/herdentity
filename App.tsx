@@ -11,12 +11,31 @@ import StoriesPage from './pages/Stories';
 import ContactPage from './pages/Contact';
 
 const App: React.FC = () => {
-  const [currentRoute, setCurrentRoute] = useState<string>(window.location.hash || '#home');
+  const [currentRoute, setCurrentRoute] = useState<string>(window.location.pathname);
 
   useEffect(() => {
-    const handleHashChange = () => {
-      const hash = window.location.hash || '#home';
-      setCurrentRoute(hash);
+    const handleAnchorClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      const anchor = target.closest('a');
+      if (
+        anchor &&
+        anchor.href &&
+        anchor.getAttribute('href')?.startsWith('/') &&
+        !anchor.getAttribute('href')?.startsWith('//') &&
+        anchor.target !== '_blank'
+      ) {
+        e.preventDefault();
+        const href = anchor.getAttribute('href') || '/';
+        
+        if (window.location.pathname !== href) {
+          history.pushState(null, '', href);
+          window.dispatchEvent(new Event('pushstate'));
+        }
+      }
+    };
+
+    const handleLocationChange = () => {
+      setCurrentRoute(window.location.pathname);
       
       // Auto scroll to top on route change
       window.scrollTo({
@@ -25,39 +44,40 @@ const App: React.FC = () => {
       });
     };
 
-    window.addEventListener('hashchange', handleHashChange);
+    window.addEventListener('popstate', handleLocationChange);
+    window.addEventListener('pushstate', handleLocationChange);
+    document.addEventListener('click', handleAnchorClick);
     
-    // Call once to handle initial mount with a hash
-    handleHashChange();
+    // Initial mount trigger
+    handleLocationChange();
 
     return () => {
-      window.removeEventListener('hashchange', handleHashChange);
+      window.removeEventListener('popstate', handleLocationChange);
+      window.removeEventListener('pushstate', handleLocationChange);
+      document.removeEventListener('click', handleAnchorClick);
     };
   }, []);
 
   const renderPage = () => {
     switch (currentRoute) {
-      case '#home':
+      case '/':
+      case '/home':
         return <Home />;
-      case '#about':
+      case '/about':
         return <AboutPage />;
-      case '#framework':
+      case '/framework':
         return <FrameworkPage />;
-      case '#programmes':
+      case '/programmes':
         return <ProgrammesPage />;
-      case '#resources':
+      case '/resources':
         return <ResourcesPage />;
-      case '#community':
+      case '/community':
         return <CommunityPage />;
-      case '#stories':
+      case '/stories':
         return <StoriesPage />;
-      case '#contact':
+      case '/contact':
         return <ContactPage />;
       default:
-        // Handle anchor sub-scrolling if it's on the homepage
-        if (currentRoute.startsWith('#features') || currentRoute.startsWith('#stories')) {
-          return <Home />;
-        }
         return <Home />;
     }
   };
