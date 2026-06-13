@@ -69,7 +69,7 @@ const About: React.FC = () => {
               Founder & CEO, Herdentity
             </p>
             <p className="text-brand-text-muted text-sm sm:text-base leading-relaxed font-light">
-              Herdentity was born out of a desire to see women live with purpose, fully aware of their capabilities. Having navigated corporate spaces and entrepreneurial shifts, I realized that true development isn't just about professional tools—it's about identity.
+              Herdentity was born out of a desire to see women live with purpose, fully aware of their capabilities. Having navigated corporate spaces and entrepreneurial shifts, I realized that true development isn't just about professional tools; it's about identity.
             </p>
             <p className="text-brand-text-muted text-sm sm:text-base leading-relaxed font-light">
               We started Herdentity to help women bridge that gap: creating a safe ecosystem where they can strip away expectations, equip themselves with practical skills, and step confidently into leadership.
@@ -120,7 +120,7 @@ const About: React.FC = () => {
                   Our Vision
                 </h3>
                 <p className="text-brand-text-dark/70 text-base sm:text-lg leading-relaxed font-light">
-                  To become a global force for female transformation—raising confident, self-aware, purpose-driven women who live boldly, lead strongly, and positively influence generations.
+                  To become a global force for female transformation, raising confident, self-aware, purpose-driven women who live boldly, lead strongly, and positively influence generations.
                 </p>
               </div>
             </motion.div>

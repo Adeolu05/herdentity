@@ -102,7 +102,7 @@ const Framework: React.FC = () => {
                     PILLAR {s.num}
                   </span>
                   <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold">
-                    {s.letter} — {s.word}
+                    {s.letter} {s.word}
                   </h2>
                   <p className="text-brand-gold text-sm sm:text-base font-medium font-label uppercase tracking-wider">
                     {s.tagline}
